@@ -1,0 +1,164 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+p {
+  font-size: 25px;
+  max-width: 1100px;
+  margin: 20px auto;
+  text-align: justify;
+  color: #111;
+}
+.gta-naslov {
+  font-size: 35px;
+  color:black;
+  text-align: center;
+}
+.rdr-naslov {
+  font-size: 35px;
+  color:black;
+  text-align: center;
+}
+.gow-naslov {
+  font-size: 35px;
+  color:black;
+  text-align: center;
+}
+.got-naslov {
+  font-size: 35px;
+  color:black;
+  text-align: center;
+}
+.back-link {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.back-link a {
+  color: #00bfff;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: rgba(0, 191, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.back-link a:hover {
+  background-color: #00bfff;
+  color: #0c0c0c;
+}
+img {
+  display: block;
+  margin: 40px auto;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+iframe {
+  display: block;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+input[type="submit"] {
+  background-color: #00bfff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0099cc;
+}
+.naslov,
+.mudja-naslov,
+.serbian-naslov,
+.radbrad-naslov,
+.blitz-naslov,
+.jack-naslov,
+.mk-naslov {
+  font-size: 35px;
+  color: black;
+  text-align: center;
+  margin-top: 48px;
+}
+.home {
+  text-align: center;
+  background-color: #fafafa;
+  padding-bottom: 50px;
+}
+
+.home h1 {
+  font-size: 48px;
+  margin-top: 40px;
+  color: #111;
+}
+
+.home p {
+  font-size: 22px;
+  color: #333;
+  max-width: 800px;
+  margin: 10px auto 40px;
+}
+
+
+.home img {
+  width: 300px;
+  border-radius: 10px;
+  margin: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.home img:hover {
+  transform: scale(1.05);
+}
+
+
+.mini-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.mini-form input,
+.mini-form textarea {
+  width: 320px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.mini-form input[type="submit"] {
+  background-color: #00bfff;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.mini-form input[type="submit"]:hover {
+  background-color: #0099cc;
+}
+
+
+footer {
+  margin-top: 40px;
+  color: #666;
+  font-size: 14px;
+}
