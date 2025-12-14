@@ -1,3 +1,4 @@
+/* ===== GLOBAL ===== */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
@@ -12,48 +13,9 @@ p {
   text-align: justify;
   color: #111;
 }
-.gta-naslov {
-  font-size: 35px;
-  color:black;
-  text-align: center;
-}
-.rdr-naslov {
-  font-size: 35px;
-  color:black;
-  text-align: center;
-}
-.gow-naslov {
-  font-size: 35px;
-  color:black;
-  text-align: center;
-}
-.got-naslov {
-  font-size: 35px;
-  color:black;
-  text-align: center;
-}
-.back-link {
-  text-align: center;
-  margin-top: 60px;
-}
 
-.back-link a {
-  color: #00bfff;
-  text-decoration: none;
-  font-size: 18px;
-  background-color: rgba(0, 191, 255, 0.1);
-  padding: 10px 20px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.back-link a:hover {
-  background-color: #00bfff;
-  color: #0c0c0c;
-}
 img {
   display: block;
-  margin: 40px auto;
   border-radius: 10px;
   max-width: 100%;
   height: auto;
@@ -64,24 +26,19 @@ img {
 img:hover {
   transform: scale(1.02);
 }
+
 iframe {
   display: block;
   margin: 40px auto;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
-input[type="submit"] {
-  background-color: #00bfff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-}
 
-input[type="submit"]:hover {
-  background-color: #0099cc;
-}
+/* ===== NASLOVI ===== */
+.gta-naslov,
+.rdr-naslov,
+.gow-naslov,
+.got-naslov,
 .naslov,
 .mudja-naslov,
 .serbian-naslov,
@@ -94,6 +51,8 @@ input[type="submit"]:hover {
   text-align: center;
   margin-top: 48px;
 }
+
+/* ===== HOME ===== */
 .home {
   text-align: center;
   background-color: #fafafa;
@@ -113,26 +72,58 @@ input[type="submit"]:hover {
   margin: 10px auto 40px;
 }
 
+/* --- HOME LINKOVI (KLJUČNI FIX) --- */
+.home-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 20px 0 30px;
+}
 
-.home img {
+.home-links a {
+  display: inline-block;
+}
+
+.home-links img {
   width: 300px;
-  border-radius: 10px;
-  margin: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
+  margin: 0;              /* gasi ogromni klik prostor */
+  display: block;
 }
 
-.home img:hover {
-  transform: scale(1.05);
+/* ===== BACK LINK ===== */
+.back-link {
+  text-align: center;
+  margin-top: 60px;
 }
 
+.back-link a {
+  color: #00bfff;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: rgba(0, 191, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
 
+.back-link a:hover {
+  background-color: #00bfff;
+  color: #0c0c0c;
+}
+
+/* ===== FORMA ===== */
 .mini-form {
+  position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  margin-top: 40px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 40px auto;
 }
 
 .mini-form input,
@@ -149,6 +140,8 @@ input[type="submit"]:hover {
   color: white;
   cursor: pointer;
   border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
   transition: 0.3s;
 }
 
@@ -156,9 +149,47 @@ input[type="submit"]:hover {
   background-color: #0099cc;
 }
 
-
+/* ===== FOOTER ===== */
 footer {
   margin-top: 40px;
   color: #666;
   font-size: 14px;
+}
+
+/* ===== DARK MODE ===== */
+.dark {
+  background: #0f1115 !important;
+  color: #e5e7eb !important;
+}
+
+.dark p,
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark span,
+.dark label {
+  color: #e5e7eb !important;
+}
+
+.dark a {
+  color: #7cc7ff !important;
+}
+
+.dark a:hover {
+  color: #b8e2ff !important;
+}
+
+.dark .mini-form {
+  background: #121622 !important;
+  border: 1px solid #2a3142 !important;
+}
+
+.dark .mini-form input,
+.dark .mini-form textarea {
+  background: #121622 !important;
+  color: #e5e7eb !important;
+  border-color: #2a3142 !important;
 }

@@ -1,3 +1,5 @@
+import { saveContactMessage } from "./firebase.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const tema = document.createElement("button");
   tema.textContent = "🌙 Tema";
@@ -54,17 +56,30 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(() => (s.textContent = new Date().toLocaleTimeString()), 1000);
   }
 
-  const form = document.querySelector("form");
+
+  const form = document.querySelector(".mini-form");
   if (form) {
-    form.addEventListener("submit", e => {
-      const inputs = form.querySelectorAll("input[required], textarea[required]");
-      for (let i of inputs) {
-        if (!i.value.trim()) {
-          e.preventDefault();
-          alert("Popuni sva polja!");
-          return;
-        }
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const name = form.querySelector('input[type="text"]').value.trim();
+      const email = form.querySelector('input[type="email"]').value.trim();
+      const message = form.querySelector("textarea").value.trim();
+
+      if (!name || !email || !message) {
+        alert("Popuni sva polja!");
+        return;
       }
+
+      try {
+        await saveContactMessage({ name, email, message });
+        alert("✅ Poruka je spašena u Firestore!");
+        form.reset();
+     } catch (err) {
+  console.error("FIRESTORE ERROR:", err);
+  alert("❌ FIRESTORE GREŠKA:\n" + (err?.message || err));
+}
+
     });
   }
 
@@ -74,7 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
   top.style.bottom = "60px";
   top.style.right = "20px";
   top.style.display = "none";
-  top.style.zIndex = "1000";
+  top.style.zIndex = "9999";
+
   document.body.appendChild(top);
   top.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
