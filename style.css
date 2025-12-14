@@ -1,4 +1,4 @@
-/* ===== GLOBAL ===== */
+
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
@@ -34,7 +34,7 @@ iframe {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-/* ===== NASLOVI ===== */
+
 .gta-naslov,
 .rdr-naslov,
 .gow-naslov,
@@ -52,7 +52,7 @@ iframe {
   margin-top: 48px;
 }
 
-/* ===== HOME ===== */
+
 .home {
   text-align: center;
   background-color: #fafafa;
@@ -72,7 +72,7 @@ iframe {
   margin: 10px auto 40px;
 }
 
-/* --- HOME LINKOVI (KLJUČNI FIX) --- */
+
 .home-links {
   display: flex;
   justify-content: center;
@@ -87,11 +87,11 @@ iframe {
 
 .home-links img {
   width: 300px;
-  margin: 0;              /* gasi ogromni klik prostor */
+  margin: 0;              
   display: block;
 }
 
-/* ===== BACK LINK ===== */
+
 .back-link {
   text-align: center;
   margin-top: 60px;
@@ -112,7 +112,7 @@ iframe {
   color: #0c0c0c;
 }
 
-/* ===== FORMA ===== */
+
 .mini-form {
   position: relative;
   z-index: 10;
@@ -149,14 +149,14 @@ iframe {
   background-color: #0099cc;
 }
 
-/* ===== FOOTER ===== */
+
 footer {
   margin-top: 40px;
   color: #666;
   font-size: 14px;
 }
 
-/* ===== DARK MODE ===== */
+
 .dark {
   background: #0f1115 !important;
   color: #e5e7eb !important;
@@ -193,3 +193,4 @@ footer {
   color: #e5e7eb !important;
   border-color: #2a3142 !important;
 }
+
